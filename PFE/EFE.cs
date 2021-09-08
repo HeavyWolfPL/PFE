@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MEC;
 using Exiled.API.Features;
-using Exiled.Events;
-using Config = Exiled.Loader.Config;
 using Handlers = Exiled.Events.Handlers;
 
-namespace PFE
+namespace EFE
 {
     public class Plugin : Plugin<Config>
     {
 		public override string Author { get; } = "Wafel & Cyanox";
-		public override string Name { get; } = "PeanutFckingExplodes";
-		public override string Prefix { get; } = "PFE";
+		public override string Name { get; } = "EveryoneFckingExplodes";
+		public override string Prefix { get; } = "EFE";
 		public override Version Version { get; } = new Version(3, 0, 0);
 		public override Version RequiredExiledVersion { get; } = new Version(3, 0, 0);
 

@@ -1,16 +1,9 @@
 ﻿using Exiled.API.Features;
 using Exiled.API.Features.Items;
 using Exiled.Events.EventArgs;
-using InventorySystem.Items.ThrowableProjectiles;
-using Mirror;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
 
-namespace PFE
+namespace EFE
 {
     public class PlayerEvents
     {
@@ -19,21 +12,21 @@ namespace PFE
 
 		public void OnPlayerDeath(DyingEventArgs ev)
 		{
-			if (ev.Target.Role == RoleType.Scp173)
-			{
+			//if (ev.Target.Role != RoleType.Spectator)
+			//{
 				try
                 {
 					for (int i = 0; i < Plugin.Singleton.Config.Magnitude; i++)
 					{
 						new ExplosiveGrenade(ItemType.GrenadeHE, ev.Target) { FuseTime = Plugin.Singleton.Config.Delay }.SpawnActive(ev.Target.Position, ev.Target);
-						Log.Debug($"SCP-173 has exploded ({ev.Target.Position}) with a {Plugin.Singleton.Config.Delay} delay.", Plugin.Singleton?.Config?.Debug ?? false);
+						Log.Debug($"Player {ev.Target.Nickname} ({ev.Target.Role}) has exploded ({ev.Target.Position}) with a {Plugin.Singleton.Config.Delay} delay.", Plugin.Singleton?.Config?.Debug ?? false);
 					}
 				}
 				catch (Exception e)
 				{
-					Log.Error($"PFE has encountered a problem while trying to make an explosion. Error available below: \n{e} \n--------- End of Error ---------");
+					Log.Error($"EFE has encountered a problem while trying to make an explosion. Error available below: \n{e} \n--------- End of Error ---------");
 				}
-			}
+			//}
 		}
 	}
 }
