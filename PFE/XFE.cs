@@ -2,13 +2,13 @@
 using Exiled.API.Features;
 using Handlers = Exiled.Events.Handlers;
 
-namespace EFE
+namespace XFE
 {
     public class Plugin : Plugin<Config>
     {
 		public override string Author { get; } = "Wafel & Cyanox";
-		public override string Name { get; } = "EveryoneFckingExplodes";
-		public override string Prefix { get; } = "EFE";
+		public override string Name { get; } = "SomethingFckingExplodes";
+		public override string Prefix { get; } = "XFE";
 		public override Version Version { get; } = new Version(3, 0, 0);
 		public override Version RequiredExiledVersion { get; } = new Version(3, 0, 0);
 

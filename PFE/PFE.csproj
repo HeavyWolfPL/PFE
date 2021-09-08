@@ -7,8 +7,8 @@
     <ProjectGuid>{16580515-837F-4C72-9E1B-C31823F73016}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EFE</RootNamespace>
-    <AssemblyName>EFE</AssemblyName>
+    <RootNamespace>XFE</RootNamespace>
+    <AssemblyName>XFE</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -73,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="EFE.cs" />
+    <Compile Include="XFE.cs" />
     <Compile Include="PlayerEvents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

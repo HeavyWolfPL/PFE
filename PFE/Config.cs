@@ -1,12 +1,19 @@
 ﻿using Exiled.API.Interfaces;
+using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace EFE
+namespace XFE
 {
 	public class Config : IConfig
 	{
 		public bool IsEnabled { get; set; } = true;
 		public bool Debug { get; set; } = false;
+		[Description("Which classes should explode after death?")]
+		public List<RoleType> Roles { get; set; } = new List<RoleType>
+		{
+			RoleType.Scp173,
+			RoleType.Scp0492
+		};
 
 		[Description("Magnitude is the quantity of explosions. A low number recommended.")]
 		public int Magnitude { get; set; } = 1;
